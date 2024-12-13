@@ -115,19 +115,20 @@ def check_valid_string_PDA(PDA, string):
             stack.append(transition_choice[4])
         
         # Update steps with a tuple of info
-        # Format: start_state input end_state (pop) (push)
+        # Format: start_state input end_state pop push
         steps.append((current_state, transition_choice[1], transition_choice[2], transition_choice[3], transition_choice[4]))
 
         # Take the transition
         current_state = transition_choice[2] # Update current state
 
-
 # For easier output
 def out(message, steps=None):
     if steps is not None:
         print(message)
+        # Step format: start_state input end_state pop push
+        print("\nSTEPS ---- Format: begin_state read_symbol end_state pop_symbol push_symbol")
         for step in steps:
-            print (step)
+            print (f"{step[0]} {step[1]} {step[2]} {step[3]} {step[4]}")
     else:
         print(message)
 
