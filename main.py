@@ -127,6 +127,7 @@ def out(message, steps=None):
         print(message)
         # Step format: start_state input end_state pop push
         print("\nSTEPS ---- Format: begin_state read_symbol end_state pop_symbol push_symbol")
+        print("Note: An _ represents lambda (not popping or pushing anything)")
         for step in steps:
             print (f"{step[0]} {step[1]} {step[2]} {step[3]} {step[4]}")
     else:
