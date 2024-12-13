@@ -40,7 +40,7 @@ def check_valid_string_PDA(PDA, string):
         if i == len(string):
             # Accept if we're in an accepting state and stack is empty
             if current_state in PDA[4] and len(stack) <= 0:
-                out[results[0], steps]
+                out(results[0], steps)
             # Reject otherwise
             else:
                 out(results[1])
@@ -67,6 +67,11 @@ def check_valid_string_PDA(PDA, string):
                 continue
             # At this point, we have a valid transition
             transition_options.append(transition)
+
+        # If we don't have any possible transitions, we know the string is invalid
+        if len(transition_options) <= 0:
+            out(results[1])
+            return
         
         # Now that we have possible transitions, let's take one
         # To decide what to take:
