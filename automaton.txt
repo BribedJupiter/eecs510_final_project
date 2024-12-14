@@ -1,10 +1,14 @@
-q_s q_f q_e q_w q_a
-a e f w
-X
+q_s q_p q_g q_f q_e q_w q_a q_q
+p g a e f w q
+X Y
 q_s
-q_a q_w
-q_s f q_f _ X
-q_s e q_e _ X
+q_q
+q_s p q_p _ Y
+q_p g q_g _ _
+q_p f q_f _ X
+q_p e q_e _ X
+q_g g q_g _ _
+q_g q q_q Y _
 q_f f q_f _ X
 q_f e q_e _ X
 q_f a q_a X _
@@ -13,5 +17,7 @@ q_e e q_e _ X
 q_e w q_w X _
 q_a a q_a X _
 q_a w q_w X _
+q_a q q_q Y _
 q_w a q_a X _
 q_w w q_w X _
+q_w q q_q Y _
